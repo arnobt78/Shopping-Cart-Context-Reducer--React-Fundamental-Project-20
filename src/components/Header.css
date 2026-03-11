@@ -12,9 +12,9 @@ header {
   border-bottom: 1px solid #d4dceb;
   font-size: 18px;
   padding: 0;
-  background-color: rgba(245, 248, 255, 0.72);
-  -webkit-backdrop-filter: blur(12px);
-  backdrop-filter: blur(12px);
+  background-color: transparent;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
 }
 
 .logo {
