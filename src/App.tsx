@@ -5,7 +5,9 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
+      {/* Shared navigation stays visible across all pages. */}
       <Header />
+      {/* Route outlet for Home and Cart pages. */}
       <AllRoutes />
     </div>
   );

@@ -5,6 +5,7 @@ import { CartProvider } from "./context/CartContext";
 import "./index.css";
 import App from "./App";
 
+// Grab the mount point created in index.html.
 const rootElement = document.getElementById("root");
 
 if (!rootElement) {
@@ -13,7 +14,9 @@ if (!rootElement) {
 
 createRoot(rootElement).render(
   <StrictMode>
+    {/* Router provides URL-based page navigation. */}
     <Router>
+      {/* CartProvider makes cart state/actions available globally. */}
       <CartProvider>
         <App />
       </CartProvider>

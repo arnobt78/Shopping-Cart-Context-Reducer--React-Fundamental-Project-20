@@ -2,6 +2,7 @@ import { ProductCard } from "../components";
 import { useTitle } from "../hooks/useTitle";
 import type { Product } from "../types/cart";
 
+// Demo dataset for learning purposes (no backend required).
 const products: Product[] = [
   {
     id: 1,
@@ -42,6 +43,7 @@ const products: Product[] = [
 ];
 
 export const Home = () => {
+  // Keeps browser tab title in sync with current page.
   useTitle("Home");
 
   return (
@@ -66,6 +68,7 @@ export const Home = () => {
       </section>
 
       <section className="products">
+        {/* Render reusable product cards from the static product list. */}
         {products.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}

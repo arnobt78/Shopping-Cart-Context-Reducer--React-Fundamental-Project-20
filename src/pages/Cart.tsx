@@ -4,8 +4,10 @@ import { useTitle } from "../hooks/useTitle";
 import { Link } from "react-router-dom";
 
 export const Cart = () => {
+  // Consume global cart state from context.
   const { total, cartList } = useCart();
   useTitle("Cart");
+  // Derived UI flag: show empty state when no items exist.
   const isCartEmpty = cartList.length === 0;
 
   return (
@@ -23,6 +25,7 @@ export const Cart = () => {
 
       <section className="cart">
         {isCartEmpty ? (
+          // Helpful message for first-time users.
           <div className="emptyState" role="status" aria-live="polite">
             <h3>Your cart is empty</h3>
             <p>
@@ -34,6 +37,7 @@ export const Cart = () => {
             </Link>
           </div>
         ) : (
+          // Render each selected cart item as a dedicated card.
           cartList.map((product) => (
             <CartCard key={product.id} product={product} />
           ))

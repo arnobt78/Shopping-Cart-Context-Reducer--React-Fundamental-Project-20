@@ -12,6 +12,7 @@ export const ProductCard = ({ product }: ProductCardProps) => {
 
   const { id, name, price, image } = product;
 
+  // Compute whether the current product already exists in cart.
   const isInCart = useMemo(() => {
     return cartList.some((cartItem) => cartItem.id === id);
   }, [cartList, id]);
@@ -23,10 +24,12 @@ export const ProductCard = ({ product }: ProductCardProps) => {
       <div className="action">
         <p>${price}</p>
         {isInCart ? (
+          // If already in cart, allow removal.
           <button className="remove" onClick={() => removeFromCart(product)}>
             Remove
           </button>
         ) : (
+          // Otherwise allow adding to cart.
           <button onClick={() => addToCart(product)}>Add To Cart</button>
         )}
       </div>

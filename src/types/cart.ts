@@ -1,3 +1,4 @@
+// Product model used in Home product list and Cart state.
 export type Product = {
   id: number;
   name: string;
@@ -5,6 +6,7 @@ export type Product = {
   image: string;
 };
 
+// Global cart state shape managed by context + reducer.
 export type CartState = {
   cartList: Product[];
   total: number;
@@ -31,6 +33,7 @@ export type UpdateTotalAction = {
   };
 };
 
+// Union keeps reducer actions strictly typed and exhaustive.
 export type CartAction =
   | AddToCartAction
   | RemoveFromCartAction

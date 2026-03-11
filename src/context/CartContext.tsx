@@ -8,6 +8,7 @@ type CartContextValue = CartState & {
   removeFromCart: (product: Product) => void;
 };
 
+// Initial global state for the cart feature.
 const initialState: CartState = {
   cartList: [],
   total: 0,
@@ -20,8 +21,10 @@ type CartProviderProps = {
 };
 
 export const CartProvider = ({ children }: CartProviderProps) => {
+  // useReducer centralizes state transitions in cartReducer.
   const [state, dispatch] = useReducer(cartReducer, initialState);
 
+  // Recompute total from the current product list.
   const updateTotal = (products: Product[]): void => {
     const total = products.reduce((acc, product) => acc + product.price, 0);
 
@@ -33,6 +36,7 @@ export const CartProvider = ({ children }: CartProviderProps) => {
     });
   };
 
+  // Add a product and synchronize derived total.
   const addToCart = (product: Product): void => {
     const updatedCartList = state.cartList.concat(product);
     updateTotal(updatedCartList);
@@ -45,6 +49,7 @@ export const CartProvider = ({ children }: CartProviderProps) => {
     });
   };
 
+  // Remove a product by id and synchronize derived total.
   const removeFromCart = (product: Product): void => {
     const updatedCartList = state.cartList.filter(
       (current) => current.id !== product.id,
@@ -72,6 +77,7 @@ export const CartProvider = ({ children }: CartProviderProps) => {
 export const useCart = (): CartContextValue => {
   const context = useContext(CartContext);
 
+  // Guard makes hook usage safe and easier to debug.
   if (!context) {
     throw new Error("useCart must be used within CartProvider");
   }

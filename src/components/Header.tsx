@@ -3,6 +3,7 @@ import { useCart } from "../context/CartContext";
 import "./Header.css";
 
 export const Header = () => {
+  // Cart count in header updates automatically from shared state.
   const { cartList } = useCart();
 
   return (
