@@ -11,7 +11,8 @@ A beginner-friendly, production-ready learning app that demonstrates modern Reac
 
 - **Live Demo:** [https://shopping-cart-context-reducer.vercel.app/](https://shopping-cart-context-reducer.vercel.app/)
 
----
+<img width="1517" height="863" alt="Screenshot 2026-03-11 at 16 43 14" src="https://github.com/user-attachments/assets/4db709d3-fc1a-4776-ac2f-6ebcf2c5d155" />
+<img width="1435" height="754" alt="Screenshot 2026-03-11 at 16 43 22" src="https://github.com/user-attachments/assets/798001cd-2134-4854-b366-6bae3744c361" />
 
 ## Table of Contents
 
