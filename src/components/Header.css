@@ -3,8 +3,8 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 260px 1fr 120px;
   height: 70px;
   align-items: center;
   width: min(var(--layout-width), calc(100% - (var(--layout-gutter) * 2)));
@@ -21,6 +21,11 @@ header {
   display: flex;
   align-items: center;
   gap: 8px;
+  min-width: 0;
+}
+
+.logo span {
+  white-space: nowrap;
 }
 
 .logo img {
@@ -34,17 +39,32 @@ header {
   padding: 10px;
 }
 
+.navigation {
+  justify-self: center;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+}
+
 .navigation .link.active {
   background-color: #eeeeee;
   border-radius: 5px;
 }
 
 .items {
+  justify-self: end;
+  width: 120px;
+  text-align: right;
   font-weight: 500;
-  min-width: 70px;
+  white-space: nowrap;
 }
 
 @media screen and (max-width: 680px) {
+  header {
+    grid-template-columns: 1fr auto;
+  }
+
   .navigation {
     display: none;
   }
