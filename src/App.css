@@ -1,14 +1,172 @@
-.products{
+.heroCard {
+  margin: 26px 0 18px;
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid #e8e8e8;
+  background: linear-gradient(130deg, #f8fbff 0%, #f9f4ff 100%);
+}
+
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #1c59ae;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.heroCard h1 {
+  font-size: clamp(26px, 4vw, 38px);
+  margin-bottom: 8px;
+}
+
+.heroText {
+  color: #404040;
+  line-height: 1.6;
+}
+
+.learnPanel {
+  margin: 12px 0 8px;
+  padding: 18px;
+  border-radius: 12px;
+  border-left: 4px solid #1c59ae;
+  background-color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.08) 0 2px 8px;
+}
+
+.learnPanel h2 {
+  margin-bottom: 8px;
+}
+
+.learnPanel p {
+  color: #333333;
+  line-height: 1.6;
+}
+
+.products {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  margin: 30px 0px;
+  justify-content: flex-start;
+  gap: 20px;
+  margin: 24px 0;
+  padding: 0;
 }
 
-.cart{
-  margin: 30px 0px;
+.cart {
+  margin: 22px 0;
 }
 
-.cart h1{
+.cart h2 {
   text-align: center;
+  font-size: clamp(28px, 5vw, 46px);
+  margin-bottom: 20px;
+}
+
+.cartPage .heroCard {
+  text-align: center;
+  margin-top: 30px;
+  border-color: #cfdcff;
+  background: #f5f8ff;
+}
+
+.cartPage .eyebrow {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: #dbe5f7;
+  color: #33415e;
+  margin-bottom: 14px;
+}
+
+.cartPage .heroCard h1 {
+  font-size: clamp(30px, 4vw, 46px);
+  margin-bottom: 12px;
+  color: #0f1a35;
+}
+
+.cartPage .heroText {
+  font-size: clamp(15px, 1.35vw, 18px);
+  color: #33415e;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.emptyState {
+  margin: 18px 0;
+  padding: 26px;
+  border-radius: 14px;
+  border: 1px dashed #c9d8f1;
+  background: #f6f9ff;
+  text-align: center;
+}
+
+.emptyState h3 {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.emptyState p {
+  color: #4a4a4a;
+  line-height: 1.6;
+}
+
+.cartPage .emptyState {
+  margin-top: 32px;
+  padding: 34px 24px 30px;
+  border: 2px dashed #b8ccff;
+  background: #f8fbff;
+}
+
+.cartPage .emptyState h3 {
+  font-size: clamp(26px, 3.2vw, 36px);
+  color: #0f1a35;
+}
+
+.cartPage .emptyState p {
+  font-size: clamp(15px, 1.2vw, 17px);
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.emptyCta {
+  display: inline-block;
+  margin-top: 20px;
+  border: 0;
+  border-radius: 14px;
+  background: #1c59ae;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 14px 28px;
+}
+
+.emptyCta:hover {
+  background: #133f7d;
+}
+
+@media (max-width: 680px) {
+  .heroCard {
+    padding: 18px;
+    margin: 18px 0 12px;
+  }
+
+  .cartPage .heroCard h1 {
+    font-size: clamp(28px, 8vw, 36px);
+  }
+
+  .cartPage .heroText {
+    font-size: 15px;
+  }
+
+  .cartPage .emptyState h3 {
+    font-size: clamp(24px, 6.5vw, 30px);
+  }
+
+  .cartPage .emptyState p {
+    font-size: 15px;
+  }
+
+  .learnPanel {
+    margin: 8px 0;
+  }
 }

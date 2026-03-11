@@ -1,14 +1,6 @@
-# Shopmate - React Context & Reducer E-Commerce Demo
+# Shopping Cart Context Reducer - React, Vite, TypeScript, Custom CSS Fundamental Project 20
 
-<img width="1200" alt="Screenshot 2024-08-29 at 18 48 19" src="https://github.com/user-attachments/assets/c0f1abe9-ade8-4998-aa5a-08db61a9e2ca"> <img width="1200" alt="Screenshot 2024-08-29 at 18 48 40" src="https://github.com/user-attachments/assets/7ae1bb28-10c3-4e5e-88cd-e8cd24f334a6">
-
----
-
-## Project Summary
-
-**Shopmate** is a learning-focused, demo E-Commerce web application built with React. It demonstrates how to manage global state using **React Context** and **useReducer**—entirely without using Redux or Redux-Toolkit. The project is ideal for anyone wanting to understand practical state management in React applications, especially for scalable, real-world scenarios like shopping carts or product listings.
-
-- **Live-Demo:** [https://shopmate-cr-arnob.netlify.app](https://shopmate-cr-arnob.netlify.app)
+- **Live Demo:** []()
 
 ---
 
@@ -53,7 +45,7 @@
 
 ## Project Structure
 
-```
+```bash
 Shopmate--React-Context-Reducer/
 ├── public/
 │   └── index.html
@@ -105,6 +97,7 @@ npm install
 ```bash
 npm install react-router-dom
 ```
+
 [React Router Docs](https://reactrouter.com/en/main)
 
 ---
@@ -114,6 +107,7 @@ npm install react-router-dom
 ```bash
 npm start
 ```
+
 Visit [http://localhost:3000](http://localhost:3000) in your browser.
 
 ---
@@ -144,35 +138,40 @@ Visit [http://localhost:3000](http://localhost:3000) in your browser.
 ### File-by-File Instruction
 
 #### `context/CartContext.js`
+
 - Creates and exports CartContext.
 - Provides CartProvider, wrapping children.
 - Uses useReducer to manage cart state.
 - Exposes cart actions via context value.
 
 #### `context/cartReducer.js`
+
 - Exports `cartReducer` function.
 - Handles cart state transitions via switch-cases (add, remove, etc.).
 
 #### `components/Cart.js`
+
 - Displays items in cart, total price, and allows removing items.
 
 #### `components/CartCard.js`
+
 - Represents individual product card.
 - Restricts "Add To Cart" to once per product.
 
 #### `App.js`
+
 - Wraps the app in the CartProvider.
 
 ---
 
 ## Available Scripts
 
-| Script         | Description                                                                          |
-| -------------- | ------------------------------------------------------------------------------------ |
-| `npm start`    | Runs the app in development mode on [http://localhost:3000](http://localhost:3000)   |
-| `npm test`     | Launches the test runner                                                             |
-| `npm run build`| Builds the app for production to the `build` folder                                  |
-| `npm run eject`| Copies configuration files and dependencies for advanced customization               |
+| Script          | Description                                                                        |
+| --------------- | ---------------------------------------------------------------------------------- |
+| `npm start`     | Runs the app in development mode on [http://localhost:3000](http://localhost:3000) |
+| `npm test`      | Launches the test runner                                                           |
+| `npm run build` | Builds the app for production to the `build` folder                                |
+| `npm run eject` | Copies configuration files and dependencies for advanced customization             |
 
 ---
 
@@ -215,11 +214,7 @@ import { useCart } from "../context/CartContext";
 
 function ProductCard({ product }) {
   const { addToCart } = useCart();
-  return (
-    <button onClick={() => addToCart(product)}>
-      Add to Cart
-    </button>
-  );
+  return <button onClick={() => addToCart(product)}>Add to Cart</button>;
 }
 ```
 
