@@ -10,7 +10,7 @@ export const Header = () => {
     <header>
       <Link to="/" className="logo">
         <img src="/assets/vite.svg" alt="Shopmate Logo" />
-        <span>Context Reducer</span>
+        <span>CONTEXT REDUCER CART</span>
       </Link>
       <nav className="navigation">
         <NavLink to="/" className="link" end>
